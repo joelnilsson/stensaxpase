@@ -10,15 +10,25 @@ while loop == False:
     1. Spela ensam
     2. Spela med någon
     3. Avsluta''')
-    avsluta = int(input("Välj alternativ: "))
+    try:
+         avsluta = int(input("Välj alternativ: "))
+         
+    except (ValueError):
+        avsluta = 4
     if avsluta == 1:
         print("Du spelar mot en dator")
-        datorVal = random.random(1,3)
-        print('''
-        1. Sten
-        2. Sax
-        3. Påse''')
-        Val = input("Välj ett alternativ")
+        while win == False:
+            
+            datorVal = random.randint(1,3)
+            print('''
+            1. Sten
+            2. Sax
+            3. Påse''')
+            Val = input("Välj ett alternativ")
+            if val == datorVal:
+                print("Ni valde samma alternativ, spela igen")
+            elif val == 1 and 
+        
     elif avsluta == 2:
         print("Två spelare")
         playerOneName = input("Ange namn för spelare 1")
@@ -27,8 +37,8 @@ while loop == False:
         1. Sten
         2. Sax
         3. Påse''')
-        playerOneC = getpass.getpass(playerOneName, " väljer: ")
-        playerTwoC = getpass.getpass(playerTwoName, " väljer: ")
+        playerOneC = getpass.getpass("Spelare 1 väljer: ")
+        playerTwoC = getpass.getpass("Spelare 2 väljer: ")
 
     elif avsluta == 3:
         exit("Tack för att du spelade") 
