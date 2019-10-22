@@ -28,7 +28,7 @@ while loop == False:
             1. Sten
             2. Sax
             3. Påse''')
-            val = int(input("Välj ett alternativ"))
+            val = int(input("Välj ett alternativ: "))
             if val == datorVal:
                 print("Ni valde samma alternativ, spela igen")
             elif val == 1 and datorVal == 2:
@@ -38,6 +38,23 @@ while loop == False:
             elif val == 1 and datorVal == 3:
                 print('''Spelare valde sten, dator valde påse
                 dator vinner''')
+                rundor = rundor + 1
+            elif val == 2 and datorVal == 1:
+                print('''Spelare valde sax, dator valde sten
+                dator vinner''')
+                rundor = rundor + 1
+            elif val == 2 and datorVal == 3:
+                print('''Spelare valde sax, dator valde påse
+                spelare vinner''')
+                rundor = rundor + 1
+            elif val == 3 and datorVal == 1:
+                print('''Spelare valde påse, dator valde sten
+                spelare vinner''')
+                rundor = rundor + 1
+            elif val == 3 and datorVal == 2:
+                print('''Spelare valde påse, dator valde sax
+                dator vinner''')
+                rundor = rundor + 1
 #Fortsätt ange Elifs om logiken
 
     elif avsluta == 2:
@@ -54,7 +71,7 @@ while loop == False:
 #gör klart spelet mot datorn innan vi fortsätter göra logiken mot en annan spelare
 
     elif avsluta == 3:
-        exit("Tack för att du spelade") 
+        exit("Tack för att du spelade")
     else:
         print("Var vänlig välj ett giltigt alternativ")
 
