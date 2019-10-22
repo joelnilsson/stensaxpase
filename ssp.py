@@ -20,8 +20,17 @@ while loop == False:
         print("Du spelar mot en dator")
         rundor = 0
         win = False
+        playerScore = 0
+        compScore = 0
         while win == False:
-            if rundor > 3:
+            if rundor > 2:
+                if playerScore > compScore:
+                    print('''
+                    
+                    
+                    Spelare har vunnit
+                    ''', playerScore, "-", compScore, '''
+                    Tack för att du spelade''')
                 win = True
             datorVal = random.randint(1,3)
             print('''
@@ -34,26 +43,32 @@ while loop == False:
             elif val == 1 and datorVal == 2:
                 print('''Spelare valde sten, dator valde sax
                 spelare vinner''')
+                playerScore = playerScore + 1
                 rundor = rundor + 1
             elif val == 1 and datorVal == 3:
                 print('''Spelare valde sten, dator valde påse
                 dator vinner''')
+                compScore = compScore + 1
                 rundor = rundor + 1
             elif val == 2 and datorVal == 1:
                 print('''Spelare valde sax, dator valde sten
                 dator vinner''')
+                compScore = compScore + 1
                 rundor = rundor + 1
             elif val == 2 and datorVal == 3:
                 print('''Spelare valde sax, dator valde påse
                 spelare vinner''')
+                playerScore = playerScore + 1
                 rundor = rundor + 1
             elif val == 3 and datorVal == 1:
                 print('''Spelare valde påse, dator valde sten
                 spelare vinner''')
+                playerScore = playerScore + 1
                 rundor = rundor + 1
             elif val == 3 and datorVal == 2:
                 print('''Spelare valde påse, dator valde sax
                 dator vinner''')
+                compScore = compScore + 1
                 rundor = rundor + 1
 #Fortsätt ange Elifs om logiken
 
